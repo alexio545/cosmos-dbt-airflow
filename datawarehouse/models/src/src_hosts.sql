@@ -2,7 +2,9 @@ WITH raw_hosts AS (
  SELECT
  *
  FROM
- airbnb_datawarehouse.raw.hosts
+
+ {{ source('airbnb_datawarehouse', 'hosts') }}
+ 
 )
 SELECT
  id AS host_id,

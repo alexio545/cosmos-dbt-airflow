@@ -2,7 +2,8 @@ WITH raw_reviews AS (
  SELECT
  *
  FROM
-  airbnb_datawarehouse.raw.reviews
+
+  {{ source('airbnb_datawarehouse', 'reviews') }}
 
 )
 SELECT
